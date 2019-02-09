@@ -1,6 +1,7 @@
 package com.admin.finders.app.app.activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,18 +16,28 @@ import java.util.ArrayList;
 
 public class SplashActivity extends AppCompatActivity {
 
+    SharedPreferences preferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         centerTitle();
+        preferences = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
+        final String name = preferences.getString("NAME", "Empty");
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, ReportListActivity.class);
-                startActivity(intent);
-                finish();
+                if(name.equalsIgnoreCase("Empty")){
+                    Intent intent = new Intent(SplashActivity.this, AuthenticationActivity.class);
+                    startActivity(intent);
+                    finish();
+                }else {
+                    Intent intent = new Intent(SplashActivity.this, ReportListActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         }, 2000);
     }

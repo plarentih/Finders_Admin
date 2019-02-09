@@ -11,12 +11,13 @@
         android:roundIcon="@drawable/app_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.admin.finders.app.app.activities.ReportListActivity" />
-        <activity android:name="com.admin.finders.app.app.activities.ReportDetailActivity"
+        <activity android:name=".app.app.activities.AuthenticationActivity"></activity>
+        <activity android:name=".app.app.activities.ReportListActivity" />
+        <activity
+            android:name=".app.app.activities.ReportDetailActivity"
             android:label="Details of Report"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name="com.admin.finders.app.app.activities.SplashActivity">
+            android:screenOrientation="portrait" />
+        <activity android:name=".app.app.activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

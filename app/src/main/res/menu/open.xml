@@ -2,8 +2,39 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_logout"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Log Out"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_zip"
+        android:orderInCategory="90"
+        android:title="Sort by ZIP code"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_locality"
+        android:orderInCategory="80"
+        android:title="Sort by locality"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_priority"
+        android:orderInCategory="70"
+        android:title="Sort by priority"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_type"
+        android:orderInCategory="60"
+        android:title="Sort by type of damage"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_status"
+        android:orderInCategory="50"
+        android:title="Sort by status"
+        app:showAsAction="never" />
+
 </menu>

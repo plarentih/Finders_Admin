@@ -5,34 +5,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/gradient"
-    android:weightSum="10">
+    android:background="#e6e6e6"
+    android:weightSum="10.1">
 
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5"
-        android:scaleType="centerInside"
+        android:layout_weight="4"
+        android:scaleType="fitCenter"
         app:srcCompat="@drawable/red_carpet" />
 
     <TextView
         android:id="@+id/textViewTitle"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
         android:layout_weight="1"
         android:fontFamily="@font/quicksand"
-        android:gravity="top|center"
-        android:text="Board Game Night"
+        android:gravity="center"
+        android:text="Board Game Night Night"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textColor="@color/white"
+        android:textColor="@color/light_black"
         android:textSize="22sp" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/quicksand"
+        android:gravity="center"
+        android:textColor="@color/light_black"
+        android:textSize="18sp"
+        android:theme="@style/SwitchTheme"/>
+
+    <TextView
+        android:id="@+id/address_report"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/quicksand"
+        android:gravity="center"
+        android:text="Rue Louis Braille, 4072, Esch-Sur-Alzette, Luxembourg"
+        android:textAllCaps="false"
+        android:textColor="@color/light_black"
+        android:textIsSelectable="true"
+        android:textSize="18sp" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_weight="2"
         android:layout_margin="10dp">
 
         <TextView
@@ -43,10 +73,33 @@
             android:text="Description Description Description Description Description "
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textColor="@color/white"
+            android:textColor="@color/light_black"
             android:textSize="18sp" />
-
     </ScrollView>
 
+    <TextView
+        android:id="@+id/textViewLabel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:fontFamily="@font/quicksand"
+        android:gravity="bottom"
+        android:text="Priority"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/light_black"
+        android:textSize="18sp" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:layout_gravity="center_horizontal"
+        android:numStars="5"
+        android:rating="0.0"
+        android:stepSize="1.0"
+        android:progressTint="#8e1314"
+        android:isIndicator="true"/>
 
 </LinearLayout>

@@ -1,8 +1,10 @@
 package com.admin.finders.app.app.adapter;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.res.ResourcesCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,6 +50,11 @@ public class ReportAdapter extends ArrayAdapter<Report> {
             viewHolder.imgView = convertView.findViewById(R.id.img);
             viewHolder.titleTxv = convertView.findViewById(R.id.titleReport);
             viewHolder.descTxv = convertView.findViewById(R.id.description);
+
+            Typeface face = ResourcesCompat.getFont(getContext(), R.font.quicksand);
+            Typeface faceBold = ResourcesCompat.getFont(getContext(), R.font.quicksand_bold);
+            viewHolder.titleTxv.setTypeface(faceBold);
+            viewHolder.descTxv.setTypeface(face);
 
             convertView.setTag(viewHolder);
         }else{

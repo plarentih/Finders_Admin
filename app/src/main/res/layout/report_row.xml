@@ -24,8 +24,8 @@
             android:layout_toEndOf="@+id/img"
             android:fontFamily="@font/quicksand_bold"
             android:text="Title of report"
-            android:textAppearance="@style/TextAppearance.AppCompat"
-            android:textColor="@color/white" />
+            android:textSize="18sp"
+            android:textColor="@color/light_black" />
 
         <TextView
             android:id="@+id/description"
@@ -34,12 +34,12 @@
             android:layout_below="@+id/titleReport"
             android:layout_marginTop="5dp"
             android:layout_toEndOf="@+id/img"
-            android:fontFamily="@font/quicksand"
+            android:fontFamily="@font/quicksand_bold"
             android:maxLines="3"
             android:minLines="1"
             android:scrollbars="vertical"
             android:text="Description of the event"
-            android:textAppearance="@style/TextAppearance.AppCompat"
-            android:textColor="@color/white" />
+            android:textSize="15sp"
+            android:textColor="@color/light_black" />
 
 </RelativeLayout>
